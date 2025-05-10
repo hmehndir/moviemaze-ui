@@ -83,7 +83,7 @@ import {
     async (email) => {
       const {
         data: { movies },
-      } = await axios.get(`http://localhost:4000/api/user/liked/${email}`);
+      } = await axios.get(`https://netflix-service.vercel.app/api/user/liked/${email}`);
       return movies;
     }
   );
@@ -93,7 +93,7 @@ import {
     async ({ movieId, email }) => {
       const {
         data: { movies },
-      } = await axios.put("http://localhost:4000/api/user/remove", {
+      } = await axios.put("https://netflix-service.vercel.app/api/user/remove", {
         email,
         movieId,
       });
